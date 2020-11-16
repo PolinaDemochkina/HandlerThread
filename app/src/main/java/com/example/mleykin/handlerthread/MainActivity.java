@@ -88,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
                         currentBitmap = BitmapFactory.decodeFile(path);
                         mImageView.setImageBitmap(currentBitmap);
                     }
-                }, 1000);
+                }, 2000);
+
                 try {
                     TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
@@ -106,10 +107,14 @@ public class MainActivity extends AppCompatActivity {
                                 "Background task2 is completed",
                                 Toast.LENGTH_SHORT)
                                 .show();
-
-//                        mUiHandler.postDelayed(this, 1000);
                     }
-                }, 1000);
+                }, 2000);
+
+                try {
+                    TimeUnit.SECONDS.sleep(1);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
             }
         };
 
